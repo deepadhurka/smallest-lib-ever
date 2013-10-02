@@ -1,0 +1,59 @@
+/*
+************************************************************************
+**                 SMALLE - the SMALlest Library Ever
+**               Copyright (c) 2013 Deepa Karnad Dhurka 
+************************************************************************
+**  email: deepa.dhurka at gmail dot com
+**  This code is distributed in the hope that it will be useful, 
+**  but WITHOUT ANY WARRANTY; without even the implied warranty 
+**  of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+**  
+**  This code is to be used for learning purposes only.
+************************************************************************
+*/
+
+smalle is a very small library to demonstrate compiling,
+installing and linking a shared library. The library has one API and
+one callback. The callback is defined in the unit test in smalle-test
+directory.
+
+Distribution Structure
+======================
+smalle/
+The shared library code, header and Makefile is in this directory.
+
+smalle-test/
+The unit test code that links dynamically with libsmalle is in this directory.
+
+
+Build Instructions
+==================
+Compiling the library
+---------------------
+1. 
+$ cd smalle
+$ make all
+$ sudo make install
+This installs the shared library using ldconfig. 
+
+2.
+Add the path to the library (/usr/local/lib) in the LD_LIBRARY_PATH env var
+
+3.
+To clean up:
+$ make clean
+
+Compiling the test program
+--------------------------
+$ cd smalle-test
+$ gcc -o smalle_ut smalle_ut.c -lsmalle -I/usr/local/include
+
+Run the test program
+--------------------
+$ ./smalle_ut 
+=============================
+Library smalle API Says Hello
+=============================
+=============================
+Library smalle CB Says Howdy
+=============================
