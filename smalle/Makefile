@@ -1,7 +1,7 @@
 #
 #***********************************************************************
 #                 SMALLE - the SMALlest Library Ever
-#               Copyright (c) 2013 Deepa Karnad Dhurka 
+#               Copyright (c) 2013-2021 Deepa Dhurka 
 #***********************************************************************
 #  email: deepa.dhurka at gmail dot com
 #  This code is distributed in the hope that it will be useful, 
